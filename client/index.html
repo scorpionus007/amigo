@@ -525,7 +525,7 @@
     <header>
         <div class="container">
             <a href="#Home" class="logo">
-                <img src="/amigo-logo.png" alt="AMIGO - Make It Go Online">
+                <img src="public/amigo-logo.png" alt="AMIGO - Make It Go Online">
             </a>
             <div class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
@@ -619,9 +619,9 @@
                 <!-- Project 3 -->
                 <div class="portfolio-item">
                     <div class="portfolio-content">
-                        <span class="tag">System Architecture</span>
-                        <h3>Enarv Books</h3>
-                        <p>Engineered a secure and efficient File Management System to handle large-scale digital assets and internal documentation.</p>
+                        <span class="tag">E-commerce & Social Media</span>
+                        <h3>Enarv</h3>
+                        <p>Designed and launched a full e‑commerce platform and built Enarv’s social media presence to drive growth and engagement.</p>
                     </div>
                 </div>
             </div>
@@ -681,18 +681,22 @@
             <p class="section-subtitle">Ready to start? Tell us about your project.</p>
 
             <div class="contact-form-container">
-                <form id="contactForm">
+                <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact">
+                    <p style="display:none">
+                        <label>Don’t fill this out: <input name="bot-field"></label>
+                    </p>
                     <div class="form-group">
                         <label for="name">Full Name</label>
-                        <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <input type="email" id="email" class="form-control" placeholder="john@company.com" required>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="john@company.com" required>
                     </div>
                     <div class="form-group">
                         <label for="type">Project Type</label>
-                        <select id="type" class="form-control">
+                        <select id="type" name="type" class="form-control">
                             <option value="mvp">MVP (Startup)</option>
                             <option value="scaling">Scaling Infrastructure</option>
                             <option value="crm">CRM / Enterprise</option>
@@ -701,7 +705,7 @@
                     </div>
                     <div class="form-group">
                         <label for="details">Project Details</label>
-                        <textarea id="details" class="form-control" rows="4" placeholder="Tell us briefly about what you need..." required></textarea>
+                        <textarea id="details" name="details" class="form-control" rows="4" placeholder="Tell us briefly about what you need..." required></textarea>
                     </div>
                     <button type="submit" class="btn btn-secondary btn-block">Send Message</button>
                 </form>
@@ -744,21 +748,7 @@
             });
         });
 
-        // Simple form submission handler (Prevent default)
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const btn = this.querySelector('button[type="submit"]');
-            const originalText = btn.innerText;
-            
-            btn.innerText = 'Message Sent!';
-            btn.style.backgroundColor = '#2E8B57';
-            
-            setTimeout(() => {
-                this.reset();
-                btn.innerText = originalText;
-                btn.style.backgroundColor = '';
-            }, 3000);
-        });
+        // Netlify Forms handles submission; no JS interception needed.
     </script>
 </body>
 </html>
