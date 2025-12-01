@@ -163,23 +163,13 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-size: 1.5rem;
-            font-weight: 800;
-            font-family: var(--font-head);
-            color: var(--text-dark);
+            height: 60px;
         }
 
-        .logo-icon {
-            width: 40px;
-            height: 40px;
-            background-color: var(--primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
+        .logo img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
         }
 
         nav ul {
@@ -535,10 +525,7 @@
     <header>
         <div class="container">
             <a href="#Home" class="logo">
-                <div class="logo-icon">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-                AMIGO
+                <img src="/logo.jpg" alt="AMIGO - Make It Go Online">
             </a>
             <div class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
