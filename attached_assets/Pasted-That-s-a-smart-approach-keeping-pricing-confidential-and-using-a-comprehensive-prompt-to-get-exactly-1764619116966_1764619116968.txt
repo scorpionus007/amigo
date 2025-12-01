@@ -1,0 +1,77 @@
+That's a smart approach—keeping pricing confidential and using a comprehensive prompt to get exactly what you need from a modern development environment like Replit.
+
+Here is the complete, detailed prompt, designed to be dropped directly into an AI code generator (like Replit's Ghostwriter or similar tools) to build your single-page HTML/CSS/JS website.
+
+---
+
+## 💻 Replit Code Generation Prompt: AMIGO Single-Page Website
+
+**Objective:** Build a modern, highly focused, single-page website for a tech services agency named AMIGO, reflecting its core brand identity, services, and target audience. The output must be a single project containing `index.html`, `style.css`, and a minimal `script.js`.
+
+### 1. Business & Brand Identity
+
+| Element | Detail |
+| :--- | :--- |
+| **Agency Name** | **AMIGO** |
+| **Full Meaning** | MIGO stands for "Make It Go Online" |
+| **Tagline** | Your Partner in Digital Transformation. |
+| **Domain** | makeitgo.online (Do not display the domain on the hero/main title text.) |
+| **Core Tone** | Professional, Trustworthy, Approachable, Strategic, and Focused on **Action/Growth**. |
+
+### 2. Visual & Design Requirements
+
+The design must be clean, modern, and high-contrast, utilizing the defined brand colors.
+
+| Element | Specification |
+| :--- | :--- |
+| **Primary Color** | **AMIGO Blue:** `#1E90FF` (Used for primary buttons, main icons, and key highlights.) |
+| **Accent Color** | **Progress Green:** `#3CB371` (Used for secondary CTAs, checkmarks, and process step highlights, symbolizing growth/action.) |
+| **Typography** | **Headlines:** Montserrat (Bold and authoritative). **Body Text:** Lato or Open Sans (Highly readable). |
+| **Logo Integration** | The logo (Icon + AMIGO text) should be placed in the sticky header. The provided logo visual concept (blue circle with a green/white right-pointing arrow) should be represented using appropriate Font Awesome icons or simple CSS shapes within the HTML structure. |
+| **Design Style** | Clean, minimalist, and responsive (mobile-friendly). Use ample whitespace. |
+| **Pricing** | **STRICTLY DO NOT INCLUDE ANY PRICING OR RATE INFORMATION.** |
+
+### 3. Target Audience
+
+The content and tone must directly appeal to these two segments:
+
+1.  **Startups:** Looking to **quickly ship** their Minimum Viable Product (MVP) and validate the market with high-quality, scalable code.
+2.  **Mid-Scale Businesses:** Seeking to **scale their existing tech infrastructure**, modernize legacy systems, or implement robust internal/enterprise software (like CRMs).
+
+### 4. Services Offered
+
+The website must clearly present these four service categories:
+
+* **Web & Product Development** (For public-facing products/sites)
+* **Custom Application Development** (For bespoke web applications and core software)
+* **Enterprise Solutions & CRM** (For business systems, data management, and BI)
+* **Internal Software Dev** (For workflow automation, legacy system modernization)
+
+### 5. Website Sections and Content
+
+The site must be a single-page structure (`index.html`) linking to the following anchor IDs:
+
+| Section ID | Focus & Content Requirements |
+| :--- | :--- |
+| `#Home` | **Hero Section.** Headline: "Launch Faster. Scale Smarter." Subtext must clearly link AMIGO to its MIGO meaning and target audience. Include a prominent **Call-to-Action (CTA)** button. |
+| `#Services` | **Services Offered.** Use the four categories listed above. Present them in an icon-based grid format. |
+| `#Portfolio` | **Proof of Concept.** Feature the following client examples to establish credibility, formatted as success highlights (not full case studies): **White Carbon Motors Website**, **WCM Squad (Application Partner)**, **Enarv Books (File Management System)**. |
+| `#Process` | **Our Approach.** Outline the 5-step process (Strategy, Architecture, Development, Deployment, Support). Use green-colored numbered markers or icons for each step. |
+| `#Contact` | **Lead Generation.** A simple form with fields for Name, Email, Project Type (Dropdown: MVP, Scaling, CRM, Other), and Project Details. The submit button should be a secondary CTA color (Green). |
+| `Header/Footer` | Sticky Header with navigation links and Logo. Footer with copyright and basic links (Privacy/Terms). |
+
+### Deliverables:
+
+Generate the code for the following files:
+1.  **`index.html`:** Full HTML structure including content and linked CSS/JS.
+2.  **`style.css`:** All necessary CSS to implement the design, layout, responsiveness, and color palette.
+3.  **`script.js`:** Minimal JavaScript for smooth scrolling (if necessary) or a simple form validation placeholder (Do not include any complex backend logic).
+
+---
+**Constraint Checklist for the Model:**
+* [ ] Uses AMIGO Blue and Progress Green.
+* [ ] Includes all five defined sections.
+* [ ] Targets Startups and Mid-Scale Businesses in the copy.
+* [ ] Features the three mentioned past clients.
+* [ ] **No pricing information anywhere.**
+* [ ] Full responsiveness implemented via CSS.
