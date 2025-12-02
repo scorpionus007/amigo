@@ -222,6 +222,20 @@
             max-width: 700px;
             margin: 0 auto 2.5rem;
         }
+        
+        /* Rotating hero tagline */
+        .rotator {
+            display: inline-block;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .rotator.fade-out {
+            opacity: 0;
+            transform: translateY(-0.25em);
+        }
+        .rotator.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
         /* --- Services Section --- */
         #Services {
@@ -567,7 +581,7 @@
     <section id="Home" class="hero-section">
         <div class="container">
             <div class="hero-content">
-                <h1>Launch Faster.<br><span>Scale Smarter.</span></h1>
+                <h1>We help you <span class="rotator" id="rotating-text" aria-live="polite">launch faster</span>.</h1>
                 <p>We are AMIGO — Your Partner to Make It Go Online. We help startups ship MVPs and established businesses scale their tech infrastructure.</p>
                 <a href="#Contact" class="btn btn-primary">Start Your Project</a>
             </div>
@@ -770,6 +784,31 @@
                 });
             });
         });
+
+        // Rotating hero tagline
+        (function () {
+            const phrases = [
+                'launch faster',
+                'scale your tech infrastructure',
+                'ship MVPs swiftly',
+                'grow online',
+                'boost conversions'
+            ];
+            const el = document.getElementById('rotating-text');
+            if (!el) return;
+            let i = 0;
+            const swap = () => {
+                el.classList.add('fade-out');
+                setTimeout(() => {
+                    i = (i + 1) % phrases.length;
+                    el.textContent = phrases[i];
+                    el.classList.remove('fade-out');
+                    el.classList.add('fade-in');
+                    setTimeout(() => el.classList.remove('fade-in'), 500);
+                }, 500);
+            };
+            setInterval(swap, 2500);
+        })();
 
         // Netlify Forms handles submission; no JS interception needed.
     </script>
