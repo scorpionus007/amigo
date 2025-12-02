@@ -165,12 +165,15 @@
             display: flex;
             align-items: center;
             height: 80px;
+            overflow: hidden;
         }
 
         .logo img {
             height: 100%;
             width: auto;
             object-fit: contain;
+            transform: scale(2);
+            transform-origin: center;
         }
 
         nav ul {
@@ -471,6 +474,9 @@
             }
             .logo {
                 height: 56px;
+            }
+            .logo img {
+                transform: scale(1.6);
             }
             .hero-content h1 {
                 font-size: 2.5rem;
